@@ -34,7 +34,7 @@ public class ClienteFrame extends JFrame {
 
         // Painel de Conexão
         JPanel painelConexao = new JPanel(new FlowLayout());
-        painelConexao.setBorder(BorderFactory.createTitledBorder("🔗 Conexão"));
+        painelConexao.setBorder(BorderFactory.createTitledBorder("Conexão"));
 
         fieldIP = new JTextField("127.0.0.1", 12);
         fieldPorta = new JTextField("1500", 5);
@@ -80,22 +80,22 @@ public class ClienteFrame extends JFrame {
 
         // Painel de Clientes
         JPanel painelClientes = new JPanel(new BorderLayout());
-        painelClientes.setBorder(BorderFactory.createTitledBorder("👥 Clientes Conectados"));
+        painelClientes.setBorder(BorderFactory.createTitledBorder("Clientes Conectados"));
         modeloClientes = new DefaultListModel<>();
         listaClientes = new JList<>(modeloClientes);
         painelClientes.add(new JScrollPane(listaClientes), BorderLayout.CENTER);
 
         // Painel de Arquivos
         JPanel painelArquivos = new JPanel(new BorderLayout());
-        painelArquivos.setBorder(BorderFactory.createTitledBorder("📁 Arquivos Compartilhados"));
+        painelArquivos.setBorder(BorderFactory.createTitledBorder("Arquivos Compartilhados"));
         modeloArquivos = new DefaultListModel<>();
         listaArquivos = new JList<>(modeloArquivos);
         JScrollPane scrollArquivos = new JScrollPane(listaArquivos);
 
         JPanel painelBotoesArquivos = new JPanel(new FlowLayout());
-        btnUpload = new JButton("📤 Upload");
-        btnDownload = new JButton("📥 Download");
-        btnDeletar = new JButton("🗑 Deletar");
+        btnUpload = new JButton("Upload");
+        btnDownload = new JButton("Download");
+        btnDeletar = new JButton("Deletar");
         btnUpload.setEnabled(false);
         btnDownload.setEnabled(false);
         btnDeletar.setEnabled(false);
@@ -109,7 +109,7 @@ public class ClienteFrame extends JFrame {
 
         // Painel de Progresso
         JPanel painelProgresso = new JPanel(new GridLayout(2, 1, 10, 10));
-        painelProgresso.setBorder(BorderFactory.createTitledBorder("📊 Progresso"));
+        painelProgresso.setBorder(BorderFactory.createTitledBorder("Progresso"));
 
         // Progresso Download
         JPanel painelProgressoDownload = new JPanel(new BorderLayout(5, 5));
@@ -144,7 +144,7 @@ public class ClienteFrame extends JFrame {
 
         // Painel de Log
         JPanel painelLog = new JPanel(new BorderLayout());
-        painelLog.setBorder(BorderFactory.createTitledBorder("📋 Log do Sistema"));
+        painelLog.setBorder(BorderFactory.createTitledBorder("Log do Sistema"));
         areaLog = new JTextArea(6, 60);
         areaLog.setEditable(false);
         areaLog.setFont(new Font("Monospaced", Font.PLAIN, 11));
@@ -331,7 +331,7 @@ public class ClienteFrame extends JFrame {
             JOptionPane.WARNING_MESSAGE);
 
         if (confirmacao == JOptionPane.YES_OPTION) {
-            log("🗑️ Solicitando exclusão: " + nomeArquivo);
+            log("Solicitando exclusão: " + nomeArquivo);
             cliente.deletarArquivo(nomeArquivo);
         } else {
             log("Exclusão cancelada pelo usuário");
